@@ -1,21 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import CollectionPage from './pages/Collection';
+import HomePage from './pages/Home';
+import ItemsPage from './pages/Items';
+import OwnersPage from './pages/Owners';
+import ReviewsPage from './pages/Reviews';
+import UsersPage from './pages/Users';
 import './App.css';
 
-class App extends Component {
-  render() {
+function App() {
+  // const [] = useState();
+
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+        <Router>
+          <div className="App-header">
+          <Route path="/" exact>
+            <HomePage/>
+          </Route>
+          <Route path="/collection" exact>
+            <CollectionPage/>
+          </Route>
+          <Route path="/items" exact>
+            <ItemsPage/>
+          </Route>
+          <Route path= "/owners" >
+            <OwnersPage/>
+          </Route>
+          <Route path="/reviews" exact>
+            <ReviewsPage/>
+          </Route>
+          <Route path="/users" exact>
+            <UsersPage/>
+          </Route>
+          </div>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
