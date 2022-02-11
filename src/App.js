@@ -1,42 +1,31 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import CollectionPage from './pages/Collection';
-import HomePage from './pages/Home';
-import ItemsPage from './pages/Items';
-import OwnersPage from './pages/Owners';
-import ReviewsPage from './pages/Reviews';
-import UsersPage from './pages/Users';
 import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Users from './pages/Users';
+import Items from './pages/Items';
+import Collections from './pages/Collections';
+import Ratings from './pages/Ratings';
+import Wishes from './pages/Wishes';
 
-function App() {
-  // const [] = useState();
-
+class App extends Component {
+  render() {
     return (
       <div className="App">
-        <Router>
-          <div className="App-header">
-          <Route path="/" exact>
-            <HomePage/>
-          </Route>
-          <Route path="/collection" exact>
-            <CollectionPage/>
-          </Route>
-          <Route path="/items" exact>
-            <ItemsPage/>
-          </Route>
-          <Route path= "/owners" >
-            <OwnersPage/>
-          </Route>
-          <Route path="/reviews" exact>
-            <ReviewsPage/>
-          </Route>
-          <Route path="/users" exact>
-            <UsersPage/>
-          </Route>
-          </div>
-      </Router>
-    </div>
-  );
+        <Link to="/">Home</Link><br/>
+        <div>
+          <Routes>
+            <Route exact path="/" element={<HomePage/>}/>
+            <Route exact path="/users" element={<Users/>}/>
+            <Route exact path="/items" element={<Items/>}/>
+            <Route exact path="/collections" element={<Collections/>}/>
+            <Route exact path="/ratings" element={<Ratings/>}/>
+            <Route exact path="/wishes" element={<Wishes/>}/>
+          </Routes>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

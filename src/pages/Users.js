@@ -1,28 +1,12 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import App from '../App';
-import HomePage from './Home';
-import UsersPage from './Users';
-import ItemsPage from './Items';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export const UsersPage = () => {
 
-    const Users = async () => {
-        const response = await fetch('/users', {
-            method: 'POST',
-        });
-    };
+const UsersPage = () => {
     return (
         <div>
-            <Link
-                onClick={HomePage}
-            >Home</Link>
-            <Link
-                onClick={UsersPage}
-            >Users</Link>
-            <Link
-                onClick={ItemsPage}
-            >Items</Link>
+            <Link to="/collections">User Collection</Link><br/>
+            <Link to="/reviews">Reviews by User</Link>
         </div>
     );
 }
