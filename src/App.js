@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Users from './pages/Users';
 import Items from './pages/Items';
@@ -8,11 +8,13 @@ import Collections from './pages/Collections';
 import Ratings from './pages/Ratings';
 import Wishes from './pages/Wishes';
 
-class App extends Component {
-  render() {
+function App() {
+  //render() {
     return (
       <div className="App">
         <Link to="/">Home</Link><br/>
+        <Link to="/users">User List</Link><br/>
+        <Link to="/items">Item List</Link>
         <div>
           <Routes>
             <Route exact path="/" element={<HomePage/>}/>
@@ -25,7 +27,7 @@ class App extends Component {
         </div>
       </div>
     );
-  }
+  //}
 }
 
 export default App;
