@@ -741,7 +741,7 @@
 	      _react2.default.createElement(
 	        _reactRouterDom.Routes,
 	        null,
-	        _react2.default.createElement(_reactRouterDom.Route, { path: '/', element: _react2.default.createElement(_HomePage2.default, null) }),
+	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: './', element: _react2.default.createElement(_HomePage2.default, null) }),
 	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/users', element: _react2.default.createElement(_Users2.default, null) }),
 	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/items', element: _react2.default.createElement(_Items2.default, null) }),
 	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/collections', element: _react2.default.createElement(_Collections2.default, null) }),
@@ -779,9 +779,13 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	_reactDom2.default.render(_react2.default.createElement(
-	  _reactRouterDom.Switch,
+	  _react2.default.StrictMode,
 	  null,
-	  _react2.default.createElement(_App2.default, null)
+	  _react2.default.createElement(
+	    _reactRouterDom.HashRouter,
+	    null,
+	    _react2.default.createElement(_App2.default, null)
+	  )
 	), document.getElementById("root"));
 
 /***/ },
@@ -2169,4 +2173,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.5a830ed5.js.map
+//# sourceMappingURL=main.e06d955b.js.map
