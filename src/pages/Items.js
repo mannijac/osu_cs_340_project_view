@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function ItemsPage() {
+const ItemsPage = function() {
     return (
         <div>
             <Link to="/wishes">Wishes</Link><br/>

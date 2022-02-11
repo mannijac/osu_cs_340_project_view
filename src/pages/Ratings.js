@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Ratings() {
+const Ratings = function() {
     return (
         <div>
             

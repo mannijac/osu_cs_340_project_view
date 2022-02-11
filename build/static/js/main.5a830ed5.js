@@ -713,7 +713,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function App() {
+	var App = function App() {
 	
 	  return _react2.default.createElement(
 	    'div',
@@ -741,7 +741,7 @@
 	      _react2.default.createElement(
 	        _reactRouterDom.Routes,
 	        null,
-	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', element: _react2.default.createElement(_HomePage2.default, null) }),
+	        _react2.default.createElement(_reactRouterDom.Route, { path: '/', element: _react2.default.createElement(_HomePage2.default, null) }),
 	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/users', element: _react2.default.createElement(_Users2.default, null) }),
 	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/items', element: _react2.default.createElement(_Items2.default, null) }),
 	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/collections', element: _react2.default.createElement(_Collections2.default, null) }),
@@ -750,7 +750,7 @@
 	      )
 	    )
 	  );
-	}
+	};
 	
 	exports.default = App;
 
@@ -779,7 +779,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	_reactDom2.default.render(_react2.default.createElement(
-	  _reactRouterDom.BrowserRouter,
+	  _reactRouterDom.Switch,
 	  null,
 	  _react2.default.createElement(_App2.default, null)
 	), document.getElementById("root"));
@@ -800,9 +800,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function Collections() {
+	var Collections = function Collections() {
 	    return _react2.default.createElement('div', null);
-	}
+	};
 	
 	exports.default = Collections;
 
@@ -822,9 +822,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function HomePage() {
+	var HomePage = function HomePage() {
 	    return _react2.default.createElement('div', null);
-	}
+	};
 	
 	exports.default = HomePage;
 
@@ -846,7 +846,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function ItemsPage() {
+	var ItemsPage = function ItemsPage() {
 	    return _react2.default.createElement(
 	        'div',
 	        null,
@@ -862,7 +862,7 @@
 	            'Ratings'
 	        )
 	    );
-	}
+	};
 	
 	exports.default = ItemsPage;
 
@@ -882,9 +882,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function Ratings() {
+	var Ratings = function Ratings() {
 	    return _react2.default.createElement('div', null);
-	}
+	};
 	
 	exports.default = Ratings;
 
@@ -906,7 +906,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function Users() {
+	var Users = function Users() {
 	    return _react2.default.createElement(
 	        'div',
 	        null,
@@ -922,7 +922,7 @@
 	            'Reviews by User'
 	        )
 	    );
-	}
+	};
 	
 	exports.default = Users;
 
@@ -942,9 +942,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function Wishes() {
+	var Wishes = function Wishes() {
 	    return _react2.default.createElement('div', null);
-	}
+	};
 	
 	exports.default = Wishes;
 
@@ -2169,4 +2169,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.4fb73725.js.map
+//# sourceMappingURL=main.5a830ed5.js.map

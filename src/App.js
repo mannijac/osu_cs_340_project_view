@@ -8,7 +8,7 @@ import Collections from './pages/Collections';
 import Ratings from './pages/Ratings';
 import Wishes from './pages/Wishes';
 
-function App() {
+const App = function() {
 
     return (
       <div className="App">
