@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export const CollectionPage = () => {
+function Collections() {
     return (
         <div>
             
@@ -9,4 +9,4 @@ export const CollectionPage = () => {
     );
 }
 
-export default CollectionPage;
+export default Collections;

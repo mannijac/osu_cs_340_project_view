@@ -3,4 +3,4 @@
 includes ghpages integration
 
 Credit:
-(tutorial)[https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/] used to set up ghpage integration.
+[tutorial](https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/) used to set up ghpage integration.

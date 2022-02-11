@@ -9,7 +9,7 @@ import Ratings from './pages/Ratings';
 import Wishes from './pages/Wishes';
 
 function App() {
-  //render() {
+
     return (
       <div className="App">
         <Link to="/">Home</Link><br/>
@@ -27,7 +27,6 @@ function App() {
         </div>
       </div>
     );
-  //}
 }
 
 export default App;

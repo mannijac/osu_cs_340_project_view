@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Wishes = () => {
+function Wishes() {
     return (
         <div>
 

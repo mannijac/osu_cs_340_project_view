@@ -714,7 +714,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function App() {
-	  //render() {
+	
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'App' },
@@ -750,7 +750,6 @@
 	      )
 	    )
 	  );
-	  //}
 	}
 	
 	exports.default = App;
@@ -780,7 +779,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	_reactDom2.default.render(_react2.default.createElement(
-	  _reactRouterDom.HashRouter,
+	  _reactRouterDom.BrowserRouter,
 	  null,
 	  _react2.default.createElement(_App2.default, null)
 	), document.getElementById("root"));
@@ -794,7 +793,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.CollectionPage = undefined;
 	
 	var _react = __webpack_require__(1);
 	
@@ -802,11 +800,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var CollectionPage = exports.CollectionPage = function CollectionPage() {
+	function Collections() {
 	    return _react2.default.createElement('div', null);
-	};
+	}
 	
-	exports.default = CollectionPage;
+	exports.default = Collections;
 
 /***/ },
 /* 10 */
@@ -848,7 +846,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var ItemsPage = function ItemsPage() {
+	function ItemsPage() {
 	    return _react2.default.createElement(
 	        'div',
 	        null,
@@ -864,7 +862,7 @@
 	            'Ratings'
 	        )
 	    );
-	};
+	}
 	
 	exports.default = ItemsPage;
 
@@ -884,9 +882,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Ratings = function Ratings() {
+	function Ratings() {
 	    return _react2.default.createElement('div', null);
-	};
+	}
 	
 	exports.default = Ratings;
 
@@ -908,7 +906,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var UsersPage = function UsersPage() {
+	function Users() {
 	    return _react2.default.createElement(
 	        'div',
 	        null,
@@ -924,9 +922,9 @@
 	            'Reviews by User'
 	        )
 	    );
-	};
+	}
 	
-	exports.default = UsersPage;
+	exports.default = Users;
 
 /***/ },
 /* 14 */
@@ -944,9 +942,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Wishes = function Wishes() {
+	function Wishes() {
 	    return _react2.default.createElement('div', null);
-	};
+	}
 	
 	exports.default = Wishes;
 
@@ -2171,4 +2169,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.6127c041.js.map
+//# sourceMappingURL=main.4fb73725.js.map
