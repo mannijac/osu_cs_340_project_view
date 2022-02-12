@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Collections = function() {
+var Collections = function() {
     return (
         <div>
             

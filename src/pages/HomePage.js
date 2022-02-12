@@ -1,9 +1,9 @@
 import React from 'react';
 
-const HomePage = function() {
+function HomePage() {
     return (
         <div>
-        
+
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Users = function() {
+var Users = function() {
     return (
         <div>
             <Link to="/collections">User Collection</Link><br/>

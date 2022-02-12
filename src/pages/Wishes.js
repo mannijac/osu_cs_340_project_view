@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Wishes = function() {
+var Wishes = function() {
     return (
         <div>
 
