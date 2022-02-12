@@ -1,7 +1,20 @@
 {
-  "main.css": "static/css/main.40b4a62f.css",
-  "main.css.map": "static/css/main.40b4a62f.css.map",
-  "main.js": "static/js/main.47e6232b.js",
-  "main.js.map": "static/js/main.47e6232b.js.map",
-  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg"
+  "files": {
+    "main.css": "/osu_cs_340_project_view/static/css/main.9cd3e80e.chunk.css",
+    "main.js": "/osu_cs_340_project_view/static/js/main.fcb5ac14.chunk.js",
+    "main.js.map": "/osu_cs_340_project_view/static/js/main.fcb5ac14.chunk.js.map",
+    "runtime-main.js": "/osu_cs_340_project_view/static/js/runtime-main.a2bcf0c0.js",
+    "runtime-main.js.map": "/osu_cs_340_project_view/static/js/runtime-main.a2bcf0c0.js.map",
+    "static/js/2.5503233d.chunk.js": "/osu_cs_340_project_view/static/js/2.5503233d.chunk.js",
+    "static/js/2.5503233d.chunk.js.map": "/osu_cs_340_project_view/static/js/2.5503233d.chunk.js.map",
+    "index.html": "/osu_cs_340_project_view/index.html",
+    "static/css/main.9cd3e80e.chunk.css.map": "/osu_cs_340_project_view/static/css/main.9cd3e80e.chunk.css.map",
+    "static/js/2.5503233d.chunk.js.LICENSE.txt": "/osu_cs_340_project_view/static/js/2.5503233d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2bcf0c0.js",
+    "static/js/2.5503233d.chunk.js",
+    "static/css/main.9cd3e80e.chunk.css",
+    "static/js/main.fcb5ac14.chunk.js"
+  ]
 }
