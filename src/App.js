@@ -9,6 +9,7 @@ import Ratings from './pages/Ratings';
 import Wishes from './pages/Wishes';
 import Nav from './components/Nav';
 
+
 function App() {
 
     return (
