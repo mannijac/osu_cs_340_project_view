@@ -4,6 +4,17 @@ body {
   color: white;
 }
 
+nav {
+  padding: 12px;
+}
+
+
+span {
+  margin: 16px;
+  border-radius: 6%;
+  padding: 4px;
+}
+
 a {
   color: white;
 }

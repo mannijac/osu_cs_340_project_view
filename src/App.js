@@ -7,14 +7,13 @@ import Items from './pages/Items';
 import Collections from './pages/Collections';
 import Ratings from './pages/Ratings';
 import Wishes from './pages/Wishes';
+import Nav from './components/Nav';
 
 function App() {
 
     return (
       <div className="App">
-        <Link to="/">Home</Link><br/>
-        <Link to="/users">User List</Link><br/>
-        <Link to="/items">Item List</Link>
+        <Nav/>
         <Routes>
           <Route exact path="/" element={<HomePage/>}/>
           <Route exact path="/users" element={<Users/>}/>
