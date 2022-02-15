@@ -18,3 +18,30 @@ span {
 a {
   color: white;
 }
+
+table {
+  text-align: center;
+  margin: auto;
+  width: auto;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+  color: #fffff0;
+  background-color: green;
+  box-shadow: 2px 4px 2px 1px rgba(0, 0, 0, .2);
+  border-radius: 6%;
+  padding: 4px;
+}
+
+tr {
+  font-size: large;  
+}
+
+td {
+  background-color: #fffff0;
+  border-style: none;
+  border-radius: 6%;
+  box-shadow: 2px 4px 2px 1px rgba(0, 0, 0, .2);
+}
