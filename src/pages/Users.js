@@ -4,12 +4,11 @@ import DataTable from '../components/DataTable';
 
 const userColumnLabels = ["User ID", "Email", "Screen Name", "Country Code"];
 
-var Users = function() {
+function Users() {
     return (
         <div>
-            <DataTable data={userColumnLabels}/>
-            <Link to="/collections">User Collection</Link><br/>
-            <Link to="/reviews">Reviews by User</Link>
+            <h1>Users</h1>
+            <DataTable data={userColumnLabels} />
         </div>
     );
 }

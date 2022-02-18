@@ -2,14 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DataTable from '../components/DataTable';
 
-const collectionColumnLabels = ["Title", "Platform", "Genre", "Developer", "Publisher", "Release Date"];
+const collectionColumnLabels = ["User ID", "Game ID"];
 
-var Collections = function() {
+function Collections() {
     return (
         <div>
-            <DataTable data={collectionColumnLabels}/>
-            <Link to="/wishes">Wishes</Link><br/>
-            <Link to="/reviews">Reviews by User</Link>  
+            <h1>Collections</h1>
+            <DataTable data={collectionColumnLabels} />
         </div>
     );
 }

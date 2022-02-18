@@ -4,14 +4,13 @@ import DataTable from '../components/DataTable';
 
 const itemColumnLabels = ['Game ID', 'Title', 'Platform', 'Genre', 'Developer', 'Publisher', 'Release Date'];
 
-var ItemsPage = function() {
+function Games() {
     return (
         <div>
-            <DataTable data={itemColumnLabels}/>
-            <Link to="/wishes">Wishes</Link><br/>
-            <Link to="/ratings">Ratings</Link>
+            <h1>Games</h1>
+            <DataTable data={itemColumnLabels} />
         </div>
     );
 }
 
-export default ItemsPage;
+export default Games;

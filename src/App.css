@@ -2,9 +2,11 @@
 body {
   background-color: #222;
   color: white;
+  text-align: center;
 }
 
 nav {
+  text-align: left;
   padding: 12px;
 }
 

@@ -2,14 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DataTable from '../components/DataTable';
 
-const ratingsColumnLabels = ["Screen Name", "Game", "Rating", "Comments"]; 
+const ratingsColumnLabels = ["User ID", "Game ID", "Rating", "Comment"];
 
-var Ratings = function() {
+function Ratings() {
     return (
         <div>
-            <DataTable data={ratingsColumnLabels}/>
-            <Link to="/items">Items</Link><br/>
-            <Link to="/wishes">Wishes</Link>
+            <h1>Ratings</h1>
+            <DataTable data={ratingsColumnLabels} />
         </div>
     );
 }
