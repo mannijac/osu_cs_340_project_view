@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/osu_cs_340_project_view/static/css/main.3063e4b1.chunk.css",
-    "main.js": "/osu_cs_340_project_view/static/js/main.f8af2ac6.chunk.js",
-    "main.js.map": "/osu_cs_340_project_view/static/js/main.f8af2ac6.chunk.js.map",
+    "main.css": "/osu_cs_340_project_view/static/css/main.6da0f7e3.chunk.css",
+    "main.js": "/osu_cs_340_project_view/static/js/main.e3b0bc2e.chunk.js",
+    "main.js.map": "/osu_cs_340_project_view/static/js/main.e3b0bc2e.chunk.js.map",
     "runtime-main.js": "/osu_cs_340_project_view/static/js/runtime-main.a2bcf0c0.js",
     "runtime-main.js.map": "/osu_cs_340_project_view/static/js/runtime-main.a2bcf0c0.js.map",
-    "static/js/2.2ebd872f.chunk.js": "/osu_cs_340_project_view/static/js/2.2ebd872f.chunk.js",
-    "static/js/2.2ebd872f.chunk.js.map": "/osu_cs_340_project_view/static/js/2.2ebd872f.chunk.js.map",
+    "static/js/2.1ece57f8.chunk.js": "/osu_cs_340_project_view/static/js/2.1ece57f8.chunk.js",
+    "static/js/2.1ece57f8.chunk.js.map": "/osu_cs_340_project_view/static/js/2.1ece57f8.chunk.js.map",
     "index.html": "/osu_cs_340_project_view/index.html",
-    "static/css/main.3063e4b1.chunk.css.map": "/osu_cs_340_project_view/static/css/main.3063e4b1.chunk.css.map",
-    "static/js/2.2ebd872f.chunk.js.LICENSE.txt": "/osu_cs_340_project_view/static/js/2.2ebd872f.chunk.js.LICENSE.txt"
+    "static/css/main.6da0f7e3.chunk.css.map": "/osu_cs_340_project_view/static/css/main.6da0f7e3.chunk.css.map",
+    "static/js/2.1ece57f8.chunk.js.LICENSE.txt": "/osu_cs_340_project_view/static/js/2.1ece57f8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a2bcf0c0.js",
-    "static/js/2.2ebd872f.chunk.js",
-    "static/css/main.3063e4b1.chunk.css",
-    "static/js/main.f8af2ac6.chunk.js"
+    "static/js/2.1ece57f8.chunk.js",
+    "static/css/main.6da0f7e3.chunk.css",
+    "static/js/main.e3b0bc2e.chunk.js"
   ]
 }
