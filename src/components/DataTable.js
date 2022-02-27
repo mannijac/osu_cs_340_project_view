@@ -1,7 +1,7 @@
 import React from 'react';
 import TableHead from '../components/TableHead'
 
-function DataTable(props) {
+export default function DataTable(props) {
     return (
         <table>
                 <TableHead data={props.data}></TableHead>
@@ -14,5 +14,3 @@ function DataTable(props) {
         </table>
     );
 }
-
-export default DataTable;
