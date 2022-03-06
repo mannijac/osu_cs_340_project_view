@@ -1,6 +1,6 @@
 {
   "name": "cartridge_collector",
-  "homepage": "https://mannijac.github.io/osu_cs_340_project_view/",
+  "homepage": "http://tokiman.xzy:9191",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
