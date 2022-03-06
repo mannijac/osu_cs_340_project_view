@@ -7,7 +7,7 @@ import Input from './Input';
 export default function InsertForm(props) {
     const data = {};
     data.table_name = props.data.name;
-    data.keys = JSON.stringify(props.data.inputs);
+    data.keys = props.data.inputs;
     const [values, setValues] = useState({});
     
     const handleInput = ({ target: {name, value}}) => {
@@ -15,7 +15,7 @@ export default function InsertForm(props) {
     }
     async function handleSubmit(e) {
         e.preventDefault();  
-        data.values = JSON.stringify(values);
+        data.values = values;
         console.log(data);
         let response = await fetch(apiURL, {mode: 'cors', headers: {}, method: 'POST', body: JSON.stringify(data)})
             .then(response => response.json())
