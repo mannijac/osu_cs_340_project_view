@@ -1,6 +1,6 @@
 import React from 'react';
 import DataTable from '../components/DataTable';
-import TableInsert from '../components/TableInsert';
+import InsertForm from '../components/InsertForm';
 
 export default function DataPage(props) {
     return (
@@ -8,7 +8,7 @@ export default function DataPage(props) {
             <h1>{props.data.label}</h1>
             <DataTable data={props.data}/>
             <footer>
-                <TableInsert data={props.data}/>
+                <InsertForm data={props.data}/>
             </footer>
         </div>
     );
