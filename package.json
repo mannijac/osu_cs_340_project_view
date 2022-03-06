@@ -1,6 +1,6 @@
 {
   "name": "cartridge_collector",
-  "homepage": "http://tokiman.xzy:9191",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

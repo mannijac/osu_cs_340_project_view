@@ -11,7 +11,7 @@ export default function InsertForm(props) {
     const [values, setValues] = useState({});
     
     const handleInput = ({ target: {name, value}}) => {
-        setValues({...data.values, [name]: value})
+        setValues({...values, [name]: value})
     }
     async function handleSubmit(e) {
         e.preventDefault();  
