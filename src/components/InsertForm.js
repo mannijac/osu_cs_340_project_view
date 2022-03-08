@@ -7,7 +7,7 @@ import Input from './Input';
 
 export default function InsertForm(props) {
     const formData = new FormData();
-    formData. append('table_name', props.data.name);
+    formData.append('table_name', props.data.name);
     formData.append( 'keys', props.data.inputs);
     const [values, setValues] = useState({});
     
@@ -28,7 +28,7 @@ export default function InsertForm(props) {
     
     return (
         <form onSubmit={handleSubmit}>
-            {formData.keys.map((input, i) => <Input data={input} handle={handleInput} />)}
+            {formData.getAll.map((input, i) => <Input data={input} handle={handleInput} />)}
             <button type='submit' value='Submit'>Insert</button>
         </form>
     )
