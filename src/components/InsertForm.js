@@ -28,7 +28,7 @@ export default function InsertForm(props) {
     
     return (
         <form onSubmit={handleSubmit}>
-            {{formData.keys}.map((input, i) => <Input data={input} handle={handleInput} />)}
+            {{formData.keys()}.map((input, i) => <Input data={input} handle={handleInput} />)}
             <button type='submit' value='Submit'>Insert</button>
         </form>
     )
