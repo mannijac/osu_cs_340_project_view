@@ -8,7 +8,7 @@ import Input from './Input';
 export default function InsertForm(props) {
     const formData = {};
     formData['table_name'] = props.data.name;
-    formData.append['inputs'] = props.data.inputs;
+    formData['inputs'] = props.data.inputs;
     const [values, setValues] = useState({});
     
     const handleInput = ({ target: {name, value}}) => {
