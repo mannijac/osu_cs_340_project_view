@@ -11,16 +11,25 @@ export default function InsertForm(props) {
     const [values, setValues] = useState({});
     
     const handleInput = ({ target: {name, value}}) => {
-        setValues({...values, [labels[name]]: value})
+        setValues({...values, [name]: value});
     }
+    
     async function handleSubmit(e) {
         e.preventDefault();  
         data.values = values;
         console.log(data);
-        let response = await fetch(apiURL, {mode: 'cors', headers: {}, method: 'POST', body: JSON.stringify(data)})
+        let response = await fetch(apiURL, {  
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
             .then(response => response.json())
-            .then(data => console.log(data));  
-    } 
+            .then(data => console.log(data))
+            .catch(error => console.log(error));  
+    }
+    
     return (
         <form onSubmit={handleSubmit}>
             {data.keys.map((input, i) => <Input data={input} handle={handleInput} />)}
