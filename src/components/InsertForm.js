@@ -18,7 +18,7 @@ export default function InsertForm(props) {
     async function handleSubmit(e) {
         e.preventDefault();  
         formData['values'] = values;
-        console.log(data);
+        console.log(formData);
         axios.post(apiURL, {formData})
             .then(response => {
                 console.log(response)
