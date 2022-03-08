@@ -8,7 +8,7 @@ import Input from './Input';
 export default function InsertForm(props) {
     const formData = new FormData();
     formData.append('table_name', props.data.name);
-    formData.append( 'keys', props.data.inputs);
+    formData.append( 'inputs', props.data.inputs);
     const [values, setValues] = useState({});
     
     const handleInput = ({ target: {name, value}}) => {
@@ -25,10 +25,9 @@ export default function InsertForm(props) {
             })
             .catch(error => console.log(error));  
     }
-    const keys = new Map(formData.keys());
     return (
         <form onSubmit={handleSubmit}>
-            {keys.map((input, i) => <Input data={input} handle={handleInput} />)}
+            {formData.get('inputs').map((input, i) => <Input data={input} handle={handleInput} />)}
             <button type='submit' value='Submit'>Insert</button>
         </form>
     )
