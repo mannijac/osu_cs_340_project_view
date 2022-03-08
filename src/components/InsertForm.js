@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from axios;
+import axios from 'axios';
 import { useState } from 'react';
 import labels from '../data/labels';
 import apiURL from '../data/apiURL';
