@@ -6,7 +6,7 @@ import apiURL from '../data/apiURL';
 import Input from './Input';
 
 export default function InsertForm(props) {
-    const formData = new FormData();
+    const formData = {};
     formData.append('table_name', props.data.name);
     formData.append( 'inputs', props.data.inputs);
     const [values, setValues] = useState({});
@@ -27,7 +27,7 @@ export default function InsertForm(props) {
     }
     return (
         <form onSubmit={handleSubmit}>
-            {formData.get('inputs').map((input, i) => <Input data={input} handle={handleInput} />)}
+            {formData['inputs'].map((input, i) => <Input data={input} handle={handleInput} />)}
             <button type='submit' value='Submit'>Insert</button>
         </form>
     )
