@@ -25,10 +25,10 @@ export default function InsertForm(props) {
             })
             .catch(error => console.log(error));  
     }
-    
+    const keys = formData.keys();
     return (
         <form onSubmit={handleSubmit}>
-            {{formData.keys()}.map((input, i) => <Input data={input} handle={handleInput} />)}
+            {keys.map((input, i) => <Input data={input} handle={handleInput} />)}
             <button type='submit' value='Submit'>Insert</button>
         </form>
     )
