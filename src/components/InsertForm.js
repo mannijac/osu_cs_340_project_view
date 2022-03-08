@@ -25,7 +25,7 @@ export default function InsertForm(props) {
             })
             .catch(error => console.log(error));  
     }
-    const keys = {formData.keys()};
+    const keys = {...formData.keys()};
     return (
         <form onSubmit={handleSubmit}>
             {keys.map((input, i) => <Input data={input} handle={handleInput} />)}
