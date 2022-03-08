@@ -20,7 +20,6 @@ export default function InsertForm(props) {
         formData.append(values, values);
         console.log(data);
         axios.post(apiURL, {formData})
-        })
             .then(response => {
                 console.log(response)
             })
