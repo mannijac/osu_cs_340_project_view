@@ -7,8 +7,8 @@ import Input from './Input';
 
 export default function InsertForm(props) {
     const formData = new FormData();
-    formData. append(table_name, props.data.name);
-    formData.append( keys, props.data.inputs);
+    formData. append('table_name', props.data.name);
+    formData.append( 'keys', props.data.inputs);
     const [values, setValues] = useState({});
     
     const handleInput = ({ target: {name, value}}) => {
@@ -17,7 +17,7 @@ export default function InsertForm(props) {
     
     async function handleSubmit(e) {
         e.preventDefault();  
-        formData.append(values, values);
+        formData.append('values', values);
         console.log(data);
         axios.post(apiURL, {formData})
             .then(response => {
