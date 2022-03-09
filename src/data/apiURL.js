@@ -1,4 +1,4 @@
 import React from "react";
 
-const apiURL = '127.0.0.1:9191/api'
+const apiURL = '/api'
 export default apiURL;
