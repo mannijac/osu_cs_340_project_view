@@ -16,10 +16,6 @@ export default function InsertForm(props) {
     
     async function handleSubmit(e) {
         e.preventDefault();  
-        for (const key in props.data.inputs) {
-            console.log(key)
-            formData[key] = values[key];
-        }
         console.log(formData);
         await axios.post(apiURL, formData, { 
             headers: {'Content-Type': 'application/json'}
