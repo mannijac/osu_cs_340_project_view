@@ -8,7 +8,7 @@ import Input from './Input';
 export default function InsertForm(props) {
     const formData = {};
     formData['table_name'] = props.data.name;
-    formData['inputs'] = props.data.inputs;
+    formData['inputs'] = JSON.stringify(props.data.inputs);
     const [values, setValues] = useState({});
     
     const handleInput = ({ target: {name, value}}) => {
@@ -17,7 +17,7 @@ export default function InsertForm(props) {
     
     async function handleSubmit(e) {
         e.preventDefault();  
-        formData['values'] = values;
+        formData['values'] = JSON.stringify(values);
         console.log(formData);
         const response = await axios.post(apiURL, formData)
             .then(response => {
