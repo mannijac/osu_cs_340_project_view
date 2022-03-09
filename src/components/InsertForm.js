@@ -4,6 +4,7 @@ import { useState } from 'react';
 import labels from '../data/labels';
 import apiURL from '../data/apiURL';
 import Input from './Input';
+import reactDom from 'react-dom';
 
 export default function InsertForm(props) {
     //formData['inputs'] = JSON.stringify(props.data.inputs);
@@ -23,13 +24,13 @@ export default function InsertForm(props) {
             .then(response => {
                 console.log(response)
                 return(
-                    <div>{response}</div>
+                    reactDom.render(<div>{response}</div>)
                 )
             })
             .catch(error => {
                 console.log(error)
                 return (
-                    <div>{error}</div>
+                    reactDom.render(<div>{error}</div>)
                 )
             });  
     }
