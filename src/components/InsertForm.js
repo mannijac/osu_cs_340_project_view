@@ -6,13 +6,12 @@ import apiURL from '../data/apiURL';
 import Input from './Input';
 
 export default function InsertForm(props) {
-    const formData = {};
-    formData['table_name'] = props.data.name;
     //formData['inputs'] = JSON.stringify(props.data.inputs);
-    const [, setValues] = useState({});
-    
+    const [formData, setFormData] = useState({});
+    formData['table_name'] = props.data.name;
+
     const handleInput = ({ target: {id, value}}) => {
-        setValues({...values, [id]: value});
+        setFormData({...formData, [id]: value});
     }
     
     async function handleSubmit(e) {
