@@ -4,7 +4,6 @@ import { useState } from 'react';
 import labels from '../data/labels';
 import apiURL from '../data/apiURL';
 import Input from './Input';
-import labels from '../data/labels';
 
 export default function InsertForm(props) {
     const formData = {};
