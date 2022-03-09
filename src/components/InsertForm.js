@@ -22,8 +22,16 @@ export default function InsertForm(props) {
         })
             .then(response => {
                 console.log(response)
+                return(
+                    <div>{response}</div>
+                )
             })
-            .catch(error => console.log(error));  
+            .catch(error => {
+                console.log(error)
+                return (
+                    <div>{error}</div>
+                )
+            });  
     }
     return (
         <form onSubmit={handleSubmit}>
