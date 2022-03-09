@@ -4,6 +4,7 @@ import { useState } from 'react';
 import labels from '../data/labels';
 import apiURL from '../data/apiURL';
 import Input from './Input';
+import labels from '../data/labels';
 
 export default function InsertForm(props) {
     const formData = {};
@@ -19,7 +20,7 @@ export default function InsertForm(props) {
         e.preventDefault();  
         for (const key in values) {
             console.log(key)
-            formData[key] = values[key];
+            formData[labels[key]] = values[key];
         }
         console.log(formData);
         await axios.post(apiURL, formData, { 
