@@ -11,15 +11,15 @@ export default function InsertForm(props) {
     //formData['inputs'] = JSON.stringify(props.data.inputs);
     const [values, setValues] = useState({});
     
-    const handleInput = ({ target: {name, value}}) => {
-        setValues({...values, [name]: value});
+    const handleInput = ({ target: {id, value}}) => {
+        setValues({...values, [id]: value});
     }
     
     async function handleSubmit(e) {
         e.preventDefault();  
-        for (const key in values) {
+        for (const key in props.data.input) {
             console.log(key)
-            formData[labels[key]] = values[key];
+            formData[key] = values[key];
         }
         console.log(formData);
         await axios.post(apiURL, formData, { 
