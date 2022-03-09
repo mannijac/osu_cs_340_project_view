@@ -21,7 +21,7 @@ export default function InsertForm(props) {
             formData[key] = values[key];
         }
         console.log(formData);
-        const response = await axios.post(apiURL, formData)
+        await axios.post(apiURL, formData)
             .then(response => {
                 console.log(response)
             })
