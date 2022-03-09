@@ -9,7 +9,7 @@ export default function InsertForm(props) {
     const formData = {};
     formData['table_name'] = props.data.name;
     //formData['inputs'] = JSON.stringify(props.data.inputs);
-    const [values, setValues] = useState({});
+    const [, setValues] = useState({});
     
     const handleInput = ({ target: {id, value}}) => {
         setValues({...values, [id]: value});
@@ -17,7 +17,7 @@ export default function InsertForm(props) {
     
     async function handleSubmit(e) {
         e.preventDefault();  
-        for (const key in props.data.input) {
+        for (const key in props.data.inputs) {
             console.log(key)
             formData[key] = values[key];
         }
