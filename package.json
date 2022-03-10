@@ -1,9 +1,10 @@
 {
   "name": "cartridge_collector",
-  "homepage": "https://mannijac.github.io/osu_cs_340_project_view/",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.26.0",
     "create-react-app": "^5.0.0",
     "react": "^17.0.2",
     "react-dev-utils": "^12.0.0",

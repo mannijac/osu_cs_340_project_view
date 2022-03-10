@@ -1,29 +1,42 @@
 import React from 'react';
+import axios from 'axios';
 import { useState } from 'react';
 import labels from '../data/labels';
 import apiURL from '../data/apiURL';
 import Input from './Input';
+import reactDom from 'react-dom';
 
 export default function InsertForm(props) {
-    const data = {};
-    data.table_name = props.data.name;
-    data.keys = props.data.inputs;
-    const [values, setValues] = useState({});
-    
-    const handleInput = ({ target: {name, value}}) => {
-        setValues({...data.values, [name]: value})
+    //formData['inputs'] = JSON.stringify(props.data.inputs);
+    const [formData, setFormData] = useState({});
+    formData['table_name'] = props.data.name;
+
+    const handleInput = ({ target: {id, value}}) => {
+        setFormData({...formData, [id]: value});
     }
+    
     async function handleSubmit(e) {
         e.preventDefault();  
-        data.values = values;
-        console.log(data);
-        const response = await fetch(apiURL, {mode: 'cors', headers: {'Access-Control-Allow-Origin':'*'}, method: 'POST', body: JSON.stringify(data)})
-            .then(response => response.json())
-            .then(data => console.log(data));  
-    } 
+        console.log(formData);
+        await axios.post(apiURL, formData, { 
+            headers: {'Content-Type': 'application/json'}
+        })
+            .then(response => {
+                console.log(response)
+                return(
+                    reactDom.render(<div>{response}</div>)
+                )
+            })
+            .catch(error => {
+                console.log(error)
+                return (
+                    reactDom.render(<div>{error}</div>)
+                )
+            });  
+    }
     return (
         <form onSubmit={handleSubmit}>
-            {data.keys.map((input, i) => <Input data={input} handle={handleInput} />)}
+            {props.data.inputs.map((input, i) => <Input data={input} handle={handleInput} />)}
             <button type='submit' value='Submit'>Insert</button>
         </form>
     )
