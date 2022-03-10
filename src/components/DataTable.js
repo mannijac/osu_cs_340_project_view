@@ -3,11 +3,19 @@ import axios from 'axios';
 import TableHead from '../components/TableHead';
 import apiURL from '../data/apiURL';
 
-export default async function DataTable(props) {
-    const dataTable = props.data
-    //const results = await axios.get(apiURL, {params: {
-    //    headers: {'Content-Type': 'application/json'}
-    //}}); // This is not finished
+export default function DataTable(props) {
+    console.log(props.data);
+    let dataTable = props.data;
+
+    async function getData(table_name) {
+        let response = await axios.get(apiURL, {params: {
+            headers: {'Content-Type': 'application/json'},
+            table_name: dataTable.name
+        }});
+        return response;
+    }
+
+    let response = getData(dataTable.name);
 
     const actionColumns = ['Collections', 'Wishes', 'Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
