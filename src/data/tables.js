@@ -9,7 +9,7 @@ const tables = [
         'inputs': ['email', 'screen_name', 'country_code']
     },
     {
-        'name': 'Game list',
+        'name': 'games',
         'label': 'Games',
         'description': 'Games list', 
         'columnNames': [

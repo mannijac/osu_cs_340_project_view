@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import TableHead from '../components/TableHead';
 import TableRow from '../components/TableRow';
@@ -7,15 +8,18 @@ import apiURL from '../data/apiURL';
 
 export default function DataTable(props) {
     const dataTable = props.data;
-    let response = [];
+    const [data, setData] = useState([]);
+
     async function getData(table_name) {
-        response = await axios.get(apiURL, {params: {
+        const response = await axios.get(apiURL, {params: {
             headers: {'Content-Type': 'application/json'},
             table_name: table_name
         }});
+        console.log(response.data);
+        setData(response.data);
     }
     getData(dataTable.name);
-    console.log(response.data);
+    
     const actionColumns = ['Collections', 'Wishes', 'Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
     if (dataTable.name === 'users' || dataTable.name === 'games') {
@@ -27,7 +31,7 @@ export default function DataTable(props) {
         <table>
             <TableHead data={columnLabels}></TableHead>
             <tbody>
-                {response.data.map((row, i) => <TableRow data={row}/>)}
+                {data.map((row, i) => <TableRow data={row}/>)}
             </tbody>
         </table>
     );
