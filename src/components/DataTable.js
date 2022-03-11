@@ -9,8 +9,8 @@ async function getData(table_name) {
         headers: {'Content-Type': 'application/json'},
         table_name: table_name
     }});
-    console.log('Data: ', response, typeof(response.data));
-    return response;
+    console.log('Data: ', response.data[0], typeof(response.data));
+    return response.data;
 }
 
 export default function DataTable(props) {
