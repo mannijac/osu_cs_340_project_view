@@ -4,22 +4,18 @@ import TableHead from '../components/TableHead';
 import TableRow from '../components/TableRow';
 import apiURL from '../data/apiURL';
 
+async function getData(table_name) {
+    let response = await axios.get(apiURL, {params: {
+        headers: {'Content-Type': 'application/json'},
+        table_name: table_name
+    }});
+    console.log('Data: ', response, typeof(response));
+    return response.data;
+}
+
 export default function DataTable(props) {
-    console.log(props.data);
-    let dataTable = props.data;
-
-    async function getData(table_name) {
-        let response = await axios.get(apiURL, {params: {
-            headers: {'Content-Type': 'application/json'},
-            table_name: dataTable.name
-        }});
-        console.log(response)
-        return response;
-    }
-
-    let response = getData(dataTable.name);
-    
-
+    const dataTable = props.data;
+    const data = getData(dataTable.name);
     const actionColumns = ['Collections', 'Wishes', 'Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
     if (dataTable.name === 'users' || dataTable.name === 'games') {
@@ -27,13 +23,11 @@ export default function DataTable(props) {
     } else {
         columnLabels = columnLabels.concat(['Delete']);
     }
-
-
     return (
         <table>
             <TableHead data={columnLabels}></TableHead>
             <tbody>
-                {response.map((row, i) => <TableRow data={row}/>)}
+                {data.map((row, i) => <TableRow data={row}/>)}
             </tbody>
         </table>
     );
