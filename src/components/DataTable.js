@@ -15,10 +15,14 @@ export default function DataTable(props) {
             headers: {'Content-Type': 'application/json'},
             table_name: table_name
         }});
-        console.log(response.data);
+        console.log(response.data);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
         setData(response.data);
     }
-    getData(dataTable.name);
+
+    if (data === []) {
+        getData(dataTable.name);
+    }
+    
     
     const actionColumns = ['Collections', 'Wishes', 'Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
