@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import TableHead from '../components/TableHead';
+import TableRow from '../components/TableRow';
 import apiURL from '../data/apiURL';
 
 export default function DataTable(props) {
@@ -12,11 +13,12 @@ export default function DataTable(props) {
             headers: {'Content-Type': 'application/json'},
             table_name: dataTable.name
         }});
+        console.log(response)
         return response;
     }
 
     let response = getData(dataTable.name);
-    console.log(response)
+    
 
     const actionColumns = ['Collections', 'Wishes', 'Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
@@ -31,7 +33,7 @@ export default function DataTable(props) {
         <table>
             <TableHead data={columnLabels}></TableHead>
             <tbody>
-                {response.map((value, i) => <TableRow data={value}/>)}
+                {response.map((row, i) => <TableRow data={row}/>)}
             </tbody>
         </table>
     );
