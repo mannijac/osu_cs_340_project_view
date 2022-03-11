@@ -12,8 +12,8 @@ function getData(table_name) {
     return response;
 }
 
-export default async function DataTable(props) {
-    const response = await getData(props.data.name);
+export default function DataTable(props) {
+    const response = getData(props.data.name);
     const dataTable = props.data;
     console.log(response.data);
     const actionColumns = ['Collections', 'Wishes', 'Delete']
