@@ -15,7 +15,7 @@ export default function DataTable(props) {
             headers: {'Content-Type': 'application/json'},
             table_name: table_name
         }});
-        console.log(response.data);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
+        console.log(response.data);
         setData(response.data);
     }
     if (refresh === true) {
