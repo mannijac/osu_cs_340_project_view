@@ -9,7 +9,7 @@ import apiURL from '../data/apiURL';
 export default function DataTable(props) {
     const dataTable = props.data;
     const [data, setData] = useState([]);
-
+    let refresh = true;
     async function getData(table_name) {
         const response = await axios.get(apiURL, {params: {
             headers: {'Content-Type': 'application/json'},
@@ -18,11 +18,10 @@ export default function DataTable(props) {
         console.log(response.data);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
         setData(response.data);
     }
-
-    if (data === []) {
+    if (refresh === true) {
         getData(dataTable.name);
+        refresh = false;
     }
-    
     
     const actionColumns = ['Collections', 'Wishes', 'Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
