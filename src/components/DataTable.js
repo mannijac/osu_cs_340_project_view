@@ -14,8 +14,8 @@ async function getData(table_name) {
 }
 
 export default async function DataTable(props) {
-    const dataTable = props.data;
     const data = await getData(dataTable.name);
+    const dataTable = props.data;
     console.log(data);
     const actionColumns = ['Collections', 'Wishes', 'Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
