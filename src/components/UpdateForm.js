@@ -6,7 +6,7 @@ import apiURL from '../data/apiURL';
 import Input from './Input';
 import reactDom from 'react-dom';
 
-export default function InsertForm(props) {
+export default function UpdateForm(props) {
     //formData['inputs'] = JSON.stringify(props.data.inputs);
     const [formData, setFormData] = useState({});
     formData['table_name'] = props.data.name;
@@ -18,7 +18,7 @@ export default function InsertForm(props) {
     async function handleSubmit(e) {
         e.preventDefault();  
         console.log(formData);
-        await axios.post(apiURL, formData, { 
+        await axios.put(apiURL, formData, { 
             headers: {'Content-Type': 'application/json'}
         })
             .then(response => {
@@ -36,9 +36,9 @@ export default function InsertForm(props) {
     }
     return (
         <form onSubmit={handleSubmit}>
-            <h2>Insert</h2>
+            <h2>Update</h2>
             {props.data.inputs.map((input, i) => <Input data={input} handle={handleInput} />)}
-            <button type='submit' value='Submit'>Insert</button>
+            <button type='submit' value='Submit'>Update</button>
         </form>
     )
 }

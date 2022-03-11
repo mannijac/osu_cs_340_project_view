@@ -2,14 +2,16 @@
 const tables = [
     {
         'name': 'users', 
-        'label': 'Users', 
+        'label': 'Users',
+        'description': 'User list', 
         'columnNames': ['user_id', 'email', 'screen_name', 'country_code'],
         'columnLabels': ['User ID', 'Email', 'Screen Name', 'Country Code'],
         'inputs': ['email', 'screen_name', 'country_code']
     },
     {
-        'name': 'games',
+        'name': 'Game list',
         'label': 'Games',
+        'description': 'Games list', 
         'columnNames': [
             'game_id', 'title', 'platform', 'genre', 'developer', 'publisher', 'release_date'
         ],
@@ -21,6 +23,7 @@ const tables = [
     {
         'name': 'collections',
         'label': 'Collections',
+        'description': "Games added to users' collections", 
         'columnNames': ['user_id', 'game_id'],
         'columnLabels': ['User ID', 'Game ID'],
         'inputs': ['user_id', 'game_id']
@@ -28,6 +31,7 @@ const tables = [
     {
         'name': 'wishes',
         'label': 'Wishes',
+        'description': 'Games users wished for', 
         'columnNames': ['user_id', 'game_id'],
         'columnLabels': ['User ID', 'Game ID'],
         'inputs': ['user_id', 'game_id']
@@ -35,6 +39,7 @@ const tables = [
     {
         'name': 'ratings',
         'label': 'Ratings',
+        'description': 'Game ratings given by users',
         'columnNames': ['user_id', 'game_id', 'rating_value', 'rating_comment'],
         'columnLabels': ['User ID', 'Game ID', 'Rating', 'Comment'],
         'inputs': ['user_id', 'game_id']

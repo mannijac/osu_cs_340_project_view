@@ -16,6 +16,7 @@ export default function DataTable(props) {
     }
 
     let response = getData(dataTable.name);
+    console.log(response)
 
     const actionColumns = ['Collections', 'Wishes', 'Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
@@ -28,13 +29,10 @@ export default function DataTable(props) {
 
     return (
         <table>
-                <TableHead data={columnLabels}></TableHead>
-                <tbody>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                </tbody>
+            <TableHead data={columnLabels}></TableHead>
+            <tbody>
+                {response.map((value, i) => <TableRow data={value}/>)}
+            </tbody>
         </table>
     );
 }

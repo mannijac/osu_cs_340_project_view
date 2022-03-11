@@ -6,6 +6,7 @@ export default function DataPage(props) {
     return (
         <div>
             <h1>{props.data.label}</h1>
+            <p>{props.data.description}</p>
             <DataTable data={props.data}/>
             <footer>
                 <InsertForm data={props.data}/>
