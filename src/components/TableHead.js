@@ -4,7 +4,7 @@ import Label from '../components/Label.js';
 export default function TableHead({data}) {
     return (
         <thead>
-            {data.map((label, i) => <Label label={label}/>)}  
+            {data.map((label, i) => <Label key={i} label={label}/>)}  
         </thead>
     );
 }

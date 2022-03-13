@@ -37,7 +37,7 @@ export default function UpdateForm(props) {
     return (
         <form onSubmit={handleSubmit}>
             <h2>Update</h2>
-            {props.data.inputs.map((input, i) => <Input data={input} handle={handleInput} />)}
+            {props.data.inputs.map((input, i) => <Input data={input} handle={handleInput} key={i} />)}
             <button type='submit' value='Submit'>Update</button>
         </form>
     )

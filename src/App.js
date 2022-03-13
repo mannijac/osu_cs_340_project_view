@@ -14,7 +14,7 @@ export default function App() {
         <Nav data={tables}/>
         <Routes>
           <Route exact path="/" element={<HomePage/>}/>
-          {tables.map((table, i) => <Route exact path={`/${table.name}`} element={<DataPage data={table}/>}/>)}
+          {tables.map((table, i) => <Route exact path={`/${table.name}`} key={i} element={<DataPage data={table}/>}/>)}
         </Routes>
       </div>
     );
