@@ -19,7 +19,7 @@ export default function DataTable(props) {
         setData(response.data);
     }
     if (refresh === true) {
-        getData(dataTable.name);
+        await getData(dataTable.name);
         refresh = false;
     }
     
