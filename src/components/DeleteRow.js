@@ -14,7 +14,9 @@ function handleClick(props) {
 }
 
 export default function DeleteRow(props) {
-    <button onClick={handleClick(props)}>
-        <MdDelete className="icon"/>
-    </button>
+    return (
+        <button onClick={handleClick(props)}>
+            <MdDelete className="icon"/>
+        </button>
+    )
 }
