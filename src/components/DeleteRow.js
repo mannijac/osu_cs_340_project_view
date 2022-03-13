@@ -10,7 +10,7 @@ function handleClick(props) {
         const id = props.rowID;
         await axios.delete(apiURL, {'table_name': name, 'rowID': id});
     }
-    //sendDelete(props);
+    sendDelete(props);
 }
 
 export default function DeleteRow(props) {

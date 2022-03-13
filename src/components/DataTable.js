@@ -20,7 +20,7 @@ export default function DataTable(props) {
     }
     getData(dataTable.name);
     
-    const actionColumns = ['Collections', 'Wishes', 'Delete']
+    const actionColumns = ['Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
     if (dataTable.name === 'users' || dataTable.name === 'games') {
         columnLabels = columnLabels.concat(actionColumns);
