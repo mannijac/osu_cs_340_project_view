@@ -9,7 +9,7 @@ import apiURL from '../data/apiURL';
 export default function DataTable(props) {
     const dataTable = props.data;
     const [data, setData] = useState([]);
-    const [refresh] = useState(true);
+    let [refresh] = useState(true);
     async function getData(table_name) {
         const response = await axios.get(apiURL, {params: {
             headers: {'Content-Type': 'application/json'},
