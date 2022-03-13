@@ -9,7 +9,7 @@ import apiURL from '../data/apiURL';
 export default function DataTable(props) {
     const dataTable = props.data;
     const [data, setData] = useState([]);
-    let [refresh] = useState(true);
+    
     async function getData(table_name) {
         const response = await axios.get(apiURL, {params: {
             headers: {'Content-Type': 'application/json'},
@@ -18,9 +18,9 @@ export default function DataTable(props) {
         console.log(response.data);
         setData(response.data);
     }
-    if (refresh === true) {
-        getData(dataTable.name);
-        refresh = false;
+    
+    getData(dataTable.name);
+    
     }
     
     const actionColumns = ['Collections', 'Wishes', 'Delete']
