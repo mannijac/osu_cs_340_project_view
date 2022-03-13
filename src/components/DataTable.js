@@ -18,10 +18,7 @@ export default function DataTable(props) {
         console.log(response.data);
         setData(response.data);
     }
-    
     getData(dataTable.name);
-    
-    }
     
     const actionColumns = ['Collections', 'Wishes', 'Delete']
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
