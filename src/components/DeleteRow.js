@@ -3,19 +3,19 @@ import react from "react";
 import {MdDelete} from 'react-icons/md';
 import apiURL from "../data/apiURL";
 
-function handleClick(props) {
-    
-    async function sendDelete(props) {
-        const name = props.name;
-        const id = props.rowID;
-        await axios.delete(apiURL, {'table_name': name, 'rowID': id});
-    }
-    sendDelete(props);
+
+function sendDelete(tableDate) {
+    axios.delete(apiURL, tableData);
 }
 
 export default function DeleteRow(props) {
+    function handleClick() {
+        const name = props.name;
+    const id = props.rowID;   
+        sendDelete(name, id);
+    }
     return (
-        <button onClick={handleClick(props)}>
+        <button onClick={handleClick}>
             <MdDelete className="icon"/>
         </button>
     )
