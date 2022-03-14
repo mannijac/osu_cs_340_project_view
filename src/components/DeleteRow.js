@@ -4,7 +4,7 @@ import {MdDelete} from 'react-icons/md';
 import apiURL from "../data/apiURL";
 
 
-function sendDelete(tableDate) {
+function sendDelete(tableData) {
     axios.delete(apiURL, tableData);
 }
 
