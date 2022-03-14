@@ -5,14 +5,13 @@ import apiURL from "../data/apiURL";
 
 
 function sendDelete(tableData) {
-    axios.delete(apiURL, tableData);
+    axios.delete(apiURL, {data: {id: tableData.id, table_name: tableData.table_name}});
 }
 
 export default function DeleteRow(props) {
     function handleClick() {
-        const name = props.name;
-    const id = props.rowID;   
-        sendDelete(name, id);
+           
+        sendDelete(props);
     }
     return (
         <button onClick={handleClick}>

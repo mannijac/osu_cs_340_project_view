@@ -4,6 +4,7 @@ import axios from 'axios';
 import TableHead from '../components/TableHead';
 import TableRow from '../components/TableRow';
 import apiURL from '../data/apiURL';
+import { useEffect } from 'react/cjs/react.production.min';
 
 
 export default function DataTable(props) {
@@ -18,9 +19,11 @@ export default function DataTable(props) {
         console.log(response.data);
         setData(response.data);
     }
-    getData(dataTable.name);
+    useEffect(() => {
+        getData(dataTable.name);
+    });
     
-    const actionColumns = ['Delete']
+    const actionColumns = ['Delete'] // Tac on column for delete icon
     let columnLabels = dataTable.columnLabels.map((val) => val); //Clone column labels
     if (dataTable.name === 'users' || dataTable.name === 'games') {
         columnLabels = columnLabels.concat(actionColumns);
@@ -31,7 +34,7 @@ export default function DataTable(props) {
         <table>
             <TableHead data={columnLabels}></TableHead>
             <tbody>
-                {data.map((row, i) => <TableRow data={row}/>)}
+                {data.map((row, i) => <TableRow table_name={table_name} data={row}/>)}
             </tbody>
         </table>
     );
