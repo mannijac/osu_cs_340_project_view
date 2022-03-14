@@ -34,7 +34,7 @@ export default function DataTable(props) {
         <table>
             <TableHead data={columnLabels}></TableHead>
             <tbody>
-                {data.map((row, i) => <TableRow table_name={table_name} data={row}/>)}
+                {data.map((row, i) => <TableRow table_name={dataTable.name} data={row}/>)}
             </tbody>
         </table>
     );
