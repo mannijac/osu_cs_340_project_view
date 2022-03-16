@@ -29,7 +29,7 @@ export default function DataTable(props) {
         }
         
         getData(dataTable.name);
-    });
+    },[]);
 
 
     return (
