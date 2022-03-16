@@ -6,19 +6,19 @@ import TableRow from '../components/TableRow';
 import apiURL from '../data/apiURL';
 import { useEffect } from 'react/cjs/react.production.min';
 
+async function getData(table_name) {
+    const response = await axios.get(apiURL, {params: {
+        headers: {'Content-Type': 'application/json'},
+        table_name: table_name
+    }});
+    console.log(response.data);
+    setData(response.data);
+}
 
 export default function DataTable(props) {
     const dataTable = props.data;
     const [data, setData] = useState([]);
     
-    async function getData(table_name) {
-        const response = await axios.get(apiURL, {params: {
-            headers: {'Content-Type': 'application/json'},
-            table_name: table_name
-        }});
-        console.log(response.data);
-        setData(response.data);
-    }
     useEffect(() => {
         getData(dataTable.name);
     });
