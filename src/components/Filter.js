@@ -1,12 +1,11 @@
 import React from 'react';
-import Options from './Options'
 
 export default function Filter(props) {
     
     return(
         <form>
             <select>
-                <Options data={props.data}/>
+            {props.data.map((column, i) => <option key={i} value={column}>{column}</option>)}
             </select>
             <input type='text'/>
             <input type='submit'/>
