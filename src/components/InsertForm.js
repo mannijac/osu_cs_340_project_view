@@ -23,6 +23,7 @@ export default function InsertForm(props) {
         })
             .then(response => {
                 console.log(response)
+                setFormData({})
                 alert(String(response))
             })
             .catch(error => {
