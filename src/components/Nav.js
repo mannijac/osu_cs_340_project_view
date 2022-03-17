@@ -10,7 +10,7 @@ export default function Nav(props) {
             <span className={'icon-container'}><GiRetroController className='icon' size={30} /></span>
             <span><b>Cartridge Collector</b></span>
             <span><Link to="/">Home</Link></span>
-            {props.data.map((table, i) => <NavLink table={table}/>)}
+            {props.data.map((table, i) => <NavLink key={i} table={table}/>)}
           </nav>
           
         </div>
