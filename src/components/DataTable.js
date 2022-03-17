@@ -33,7 +33,7 @@ export default function DataTable(props) {
 
     return (
         <div>
-        <Filter data={dataTable}
+        <Filter data={dataTable} />
         <table>
                 <TableHead data={columnLabels}></TableHead>
             <tbody>
