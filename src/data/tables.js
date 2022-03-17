@@ -24,24 +24,24 @@ const tables = [
         'name': 'collections',
         'label': 'Collections',
         'description': "Games added to users' collections", 
-        'columnNames': ['user_id', 'game_id'],
-        'columnLabels': ['User ID', 'Game ID'],
+        'columnNames': ['collection_id', 'user_id', 'game_id'],
+        'columnLabels': ['Collection ID', 'User ID', 'Game ID'],
         'inputs': ['user_id', 'game_id']
     },
     {
         'name': 'wishes',
         'label': 'Wishes',
         'description': 'Games users wished for', 
-        'columnNames': ['user_id', 'game_id'],
-        'columnLabels': ['User ID', 'Game ID'],
+        'columnNames': ['wish_id', 'user_id', 'game_id'],
+        'columnLabels': ['Wish ID', 'User ID', 'Game ID'],
         'inputs': ['user_id', 'game_id']
     },
     {
         'name': 'ratings',
         'label': 'Ratings',
         'description': 'Game ratings given by users',
-        'columnNames': ['user_id', 'game_id', 'rating_value', 'rating_comment'],
-        'columnLabels': ['User ID', 'Game ID', 'Rating', 'Comment'],
+        'columnNames': ['rating_id', 'user_id', 'game_id', 'rating_value', 'rating_comment'],
+        'columnLabels': ['Rating ID', 'User ID', 'Game ID', 'Rating', 'Comment'],
         'inputs': ['user_id', 'game_id']
     }
 ];
