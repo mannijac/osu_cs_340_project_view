@@ -9,7 +9,7 @@ export default function TableRow(props) {
     return(
         <tr>
             {tableRow.map((value, i) => <TableValue data={value}/>)}
-            <td><DeleteRow table_name = {props.table_name} id={rowID}/></td>
+            <td><DeleteRow table_name={props.table_name} id={rowID}/></td>
         </tr>
     )
 }

@@ -10,8 +10,8 @@ export default function DataPage(props) {
             <p>{props.data.description}</p>
             <DataTable data={props.data}/>
             <footer>
-                <InsertForm data={props.data}/>
-                <UpdateForm data={props.data}/>
+                <InsertForm data={props.data} />
+                <UpdateForm data={props.data} />
             </footer>
         </div>
     );

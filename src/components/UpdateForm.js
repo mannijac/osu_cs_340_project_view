@@ -23,15 +23,12 @@ export default function UpdateForm(props) {
         })
             .then(response => {
                 console.log(response)
-                return(
-                    reactDom.render(<div>{response}</div>)
-                )
+                alert(response)
+                
             })
             .catch(error => {
                 console.log(error)
-                return (
-                    reactDom.render(<div>{error}</div>)
-                )
+                alert(error)
             });  
     }
     return (
