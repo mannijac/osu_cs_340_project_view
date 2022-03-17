@@ -1,5 +1,5 @@
 import React from 'react';
-import Options from 'Options.js'
+import Options from './Options'
 
 export default function Filter(props) {
     
