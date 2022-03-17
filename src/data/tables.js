@@ -42,7 +42,7 @@ const tables = [
         'description': 'Game ratings given by users',
         'columnNames': ['rating_id', 'user_id', 'game_id', 'rating_value', 'rating_comment'],
         'columnLabels': ['Rating ID', 'User ID', 'Game ID', 'Rating', 'Comment'],
-        'inputs': ['user_id', 'game_id']
+        'inputs': ['user_id', 'game_id', 'rating_value', 'rating_comment']
     }
 ];
 
