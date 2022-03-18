@@ -23,12 +23,12 @@ export default function InsertForm(props) {
         })
             .then(response => {
                 console.log(response)
-                alert(String(response))
+                alert(response['success'])
                 window.location.reload(false)
             })
             .catch(error => {
                 console.log(error)
-                alert(String(error))
+                alert(error)
             });  
     }
     return (
