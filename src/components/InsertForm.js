@@ -22,8 +22,8 @@ export default function InsertForm(props) {
             headers: {'Content-Type': 'application/json'}
         })
             .then(response => {
-                console.log(response)
-                alert(response['success'])
+                console.log(response.json)
+                alert(response.json)
                 window.location.reload(false)
             })
             .catch(error => {
