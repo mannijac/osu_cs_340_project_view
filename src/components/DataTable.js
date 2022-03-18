@@ -33,6 +33,9 @@ export default function DataTable(props) {
             setData(response.data);
         }
         if (filter !== '') {
+            if type(filter) == String:
+                setFilter('"' + filter + '"')
+                
             getData(dataTable.name, filterKey + '=' + filter);    
         } else {
             getData(dataTable.name);
