@@ -29,9 +29,9 @@ export default function DataTable(props) {
         }
         if (filter !== '') {
             getData(dataTable.name, filterKey + '=' + filter);    
-        } else (
+        } else {
             getData(dataTable.name, '');
-        )
+        }
         
     },[dataTable.name, filter]);
 
