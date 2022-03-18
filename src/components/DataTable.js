@@ -5,6 +5,7 @@ import TableHead from '../components/TableHead';
 import TableRow from '../components/TableRow';
 import apiURL from '../data/apiURL';
 import { useEffect } from 'react/cjs/react.production.min';
+import labels from '../data/labels';
 
 export default function DataTable(props) {
     const dataTable = props.data;
@@ -47,7 +48,7 @@ export default function DataTable(props) {
         <div>
         <form onSubmit={handleSubmit}>
             <select value={filterKey} onChange={handleInput}>
-                {columnLabels.map((column, i) => <option key={i} value={column}>{column}</option>)}
+                {dataTable.columnNames.map((column, i) => <option key={i} value={column}>{labels[column]}</option>)}
             </select>
             <input id='filter' type='text' onChange={handleInput}/>
             <button type='submit' value='Submit'>Filter</button>
