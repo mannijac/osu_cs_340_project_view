@@ -10,7 +10,7 @@ import labels from '../data/labels';
 export default function DataTable(props) {
     const dataTable = props.data;
     const [data, setData] = useState([]);
-    const [filterKey, setFilterKey] = useState('');
+    const [filterKey, setFilterKey] = useState(props.data.columnNames[0]);
     const [filter, setFilter] = useState('');
 
     // Build table columns
