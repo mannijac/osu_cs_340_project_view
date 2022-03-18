@@ -21,18 +21,21 @@ export default function DataTable(props) {
     // Get table data
     useEffect(() => {
         async function getData(table_name, filter) {
-            const response = await axios.get(apiURL, {params: {
+            let params = {
                 headers: {'Content-Type': 'application/json'},
                 table_name: table_name,
-                filter: filter
-            }});
+            };
+            if (filter !== null) {
+                params['filter'] = filter
+            }
+            const response = await axios.get(apiURL, {params: params});
             console.log(response.data);
             setData(response.data);
         }
         if (filter !== '') {
             getData(dataTable.name, filterKey + '=' + filter);    
         } else {
-            getData(dataTable.name, '');
+            getData(dataTable.name,'');
         }
         setSubmit(false)
     },[dataTable.name, submit]);
