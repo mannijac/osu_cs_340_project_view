@@ -33,7 +33,13 @@ export default function DataTable(props) {
 
     return (
         <div>
-        
+        <form>
+            <select>
+                {columnLabels.map((column, i) => <option key={i} value={column}>{column}</option>)}
+            </select>
+            <input type='text'/>
+            <input type='submit'/>
+        </form>
         <table>
                 <TableHead data={columnLabels}></TableHead>
             <tbody>
