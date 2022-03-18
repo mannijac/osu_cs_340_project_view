@@ -5,7 +5,6 @@ import TableHead from '../components/TableHead';
 import TableRow from '../components/TableRow';
 import apiURL from '../data/apiURL';
 import { useEffect } from 'react/cjs/react.production.min';
-import Filter from './Filter';
 
 export default function DataTable(props) {
     const dataTable = props.data;
