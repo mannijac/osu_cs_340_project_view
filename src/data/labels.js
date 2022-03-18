@@ -14,7 +14,7 @@ const labels = {
     'publisher': 'Publisher',
     'release_date': 'Release Date',
     'collection_id': 'Collection ID',
-    'wish_id': 'Wish ID'
+    'wish_id': 'Wish ID',
     'rating_id': 'Rating ID',
     'rating_value': 'Rating',
     'rating_comment': 'Comment'
