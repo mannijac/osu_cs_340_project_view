@@ -9,7 +9,8 @@ import { useEffect } from 'react/cjs/react.production.min';
 export default function DataTable(props) {
     const dataTable = props.data;
     const [data, setData] = useState([]);
-    const [filter, setFilter] = useState({})
+    const [filterKey, setFilterKey] = useState('');
+    const [filter, setFilter] = useState('');
 
     // Build table columns
     const actionColumns = ['Delete'] // Tac on column for delete icon
@@ -20,7 +21,7 @@ export default function DataTable(props) {
         async function getData(table_name) {
             const response = await axios.get(apiURL, {params: {
                 headers: {'Content-Type': 'application/json'},
-                table_name: table_name
+                table_name: table_name,
             }});
             console.log(response.data);
             setData(response.data);
@@ -29,15 +30,27 @@ export default function DataTable(props) {
         getData(dataTable.name);
     },[dataTable.name]);
 
+    const handleInput = ({ target: {id, value}}) => {
+        if (id === 'filter') {
+            setFilter(value)
+        } else {
+            setFilterKey(value);
+        }
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        console.log(filterKey, filter)
+    }
 
     return (
         <div>
-        <form>
-            <select>
+        <form onSubmit={handleSubmit}>
+            <select value={filterKey} onChange={handleInput}>
                 {columnLabels.map((column, i) => <option key={i} value={column}>{column}</option>)}
             </select>
-            <input type='text'/>
-            <input type='submit'/>
+            <input id='filter' type='text' onChange={handleInput}/>
+            <button type='submit' value='Submit'>Filter</button>
         </form>
         <table>
                 <TableHead data={columnLabels}></TableHead>
