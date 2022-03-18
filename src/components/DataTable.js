@@ -35,7 +35,7 @@ export default function DataTable(props) {
         if (filter !== '') {
             getData(dataTable.name, filterKey + '=' + filter);    
         } else {
-            getData(dataTable.name,'');
+            getData(dataTable.name);
         }
         setSubmit(false)
     },[dataTable.name, submit]);
