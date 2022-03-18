@@ -9,7 +9,7 @@ async function sendDelete(tableData) {
     console.log(res)
     alert(res['success'])
     if (res['success'] !== null) {
-        console.log(Yay!)
+        console.log('Yay!')
         window.location.reload(false)
     }
 }
