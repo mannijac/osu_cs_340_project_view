@@ -24,6 +24,7 @@ export default function DataTable(props) {
             const response = await axios.get(apiURL, {params: {
                 headers: {'Content-Type': 'application/json'},
                 table_name: table_name,
+                filter: filter
             }});
             console.log(response.data);
             setData(response.data);
