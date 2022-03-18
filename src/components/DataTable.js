@@ -19,7 +19,7 @@ export default function DataTable(props) {
     columnLabels = columnLabels.concat(actionColumns);
     // Get table data
     useEffect(() => {
-        async function getData(table_name) {
+        async function getData(table_name, filter) {
             const response = await axios.get(apiURL, {params: {
                 headers: {'Content-Type': 'application/json'},
                 table_name: table_name,
@@ -27,9 +27,13 @@ export default function DataTable(props) {
             console.log(response.data);
             setData(response.data);
         }
+        if (filter !== '') {
+            getData(dataTable.name, filterKey + '=' + filter);    
+        } else (
+            getData(dataTable.name, '');
+        )
         
-        getData(dataTable.name);
-    },[dataTable.name]);
+    },[dataTable.name, filter]);
 
     const handleInput = ({ target: {id, value}}) => {
         if (id === 'filter') {
@@ -42,6 +46,8 @@ export default function DataTable(props) {
     function handleSubmit(e) {
         e.preventDefault()
         console.log(filterKey, filter)
+
+        
     }
 
     return (
