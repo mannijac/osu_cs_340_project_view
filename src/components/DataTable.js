@@ -32,11 +32,10 @@ export default function DataTable(props) {
             console.log(response.data);
             setData(response.data);
         }
-        if (filter !== '') {
-            if type(filter) == String:
-                setFilter('"' + filter + '"')
-                
-            getData(dataTable.name, filterKey + '=' + filter);    
+        if (typeof(filter) == 'number') {
+            getData(dataTable.name, filterKey + '=' + filter);
+        } else if (filter !== '') {
+            getData(dataTable.name, filterKey + '="' + filter + '"');
         } else {
             getData(dataTable.name);
         }
