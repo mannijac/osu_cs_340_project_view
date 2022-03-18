@@ -23,7 +23,6 @@ export default function UpdateForm(props) {
         })
             .then(response => {
                 console.log(response)
-                alert(response['success'])
                 window.location.reload(false)                
             })
             .catch(error => {

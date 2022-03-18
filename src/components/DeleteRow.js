@@ -8,7 +8,6 @@ async function sendDelete(tableData) {
     await axios.delete(apiURL, {data: {id: tableData.id, table_name: tableData.table_name}})
     .then(response => {
         console.log(response)
-        alert(String(response))
         window.location.reload(false)
     })
     .catch(error => {
