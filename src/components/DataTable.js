@@ -12,6 +12,7 @@ export default function DataTable(props) {
     const [data, setData] = useState([]);
     const [filterKey, setFilterKey] = useState(props.data.columnNames[0]);
     const [filter, setFilter] = useState('');
+    const [submit, setSubmit] = useState(false);
 
     // Build table columns
     const actionColumns = ['Delete'] // Tac on column for delete icon
@@ -32,8 +33,8 @@ export default function DataTable(props) {
         } else {
             getData(dataTable.name, '');
         }
-        
-    },[dataTable.name, filter]);
+        setSubmit(false)
+    },[dataTable.name, submit]);
 
     const handleInput = ({ target: {id, value}}) => {
         if (id === 'filter') {
@@ -46,7 +47,7 @@ export default function DataTable(props) {
     function handleSubmit(e) {
         e.preventDefault()
         console.log(filterKey, filter)
-
+        setSubmit(true)
         
     }
 
