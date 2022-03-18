@@ -7,7 +7,7 @@ import apiURL from "../data/apiURL";
 async function sendDelete(tableData) {
     res = await axios.delete(apiURL, {data: {id: tableData.id, table_name: tableData.table_name}});
     alert(res['success'])
-    if (res['error'] === null) {
+    if (res['success'] !== null) {
         window.location.reload(false)
     }
 }
